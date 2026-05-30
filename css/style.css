@@ -1362,3 +1362,17 @@ img {
 .legend-dot.holiday {
     background: #dc3545;
 }
+
+
+/* ===== FLATPICKR MONTH DROPDOWN ===== */
+.flatpickr-calendar .flatpickr-current-month {
+    font-size: 0.9rem;
+}
+
+.flatpickr-calendar .flatpickr-current-month .flatpickr-monthDropdown-months {
+    font-size: 0.9rem;
+}
+
+.flatpickr-calendar .flatpickr-current-month input.cur-year {
+    font-size: 0.9rem;
+}

@@ -89,26 +89,54 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
 })();
 
+// ===== HARI LIBUR NASIONAL INDONESIA 2026 =====
+const hariLiburIndonesia = [
+    '2026-01-01', // Tahun Baru Masehi
+    '2026-01-29', // Isra Mi'raj Nabi Muhammad SAW
+    '2026-02-17', // Tahun Baru Imlek
+    '2026-03-20', // Hari Raya Nyepi
+    '2026-03-22', // Wafat Isa Almasih
+    '2026-04-02', // Hari Raya Idul Fitri
+    '2026-04-03', // Hari Raya Idul Fitri
+    '2026-05-01', // Hari Buruh
+    '2026-05-14', // Kenaikan Isa Almasih
+    '2026-05-16', // Hari Raya Waisak
+    '2026-06-01', // Hari Lahir Pancasila
+    '2026-06-09', // Hari Raya Idul Adha
+    '2026-06-29', // Tahun Baru Hijriah
+    '2026-08-17', // Hari Kemerdekaan RI
+    '2026-09-07', // Maulid Nabi Muhammad SAW
+    '2026-12-25', // Hari Natal
+];
+
 // ===== FLATPICKR DATE PICKER (Bahasa Indonesia) =====
 const checkinDate = document.getElementById('checkinDate');
 if (checkinDate && typeof flatpickr !== 'undefined') {
     flatpickr(checkinDate, {
         locale: 'id',
-        dateFormat: 'd F Y',
-        minDate: 'today',
-        disableMobile: true,
-        monthSelectorType: 'static',
+        dateFormat: 'Y-m-d',
         altInput: true,
         altFormat: 'd F Y',
-        placeholder: 'Pilih Tanggal Check-in',
+        minDate: 'today',
+        disableMobile: true,
         onDayCreate: function(dObj, dStr, fp, dayElem) {
-            // Get the day of week (0=Sunday, 6=Saturday)
             const date = dayElem.dateObj;
             const day = date.getDay();
-            
-            // Highlight Saturday (6) and Sunday (0) as weekend/high season
+            const y = date.getFullYear();
+            const m = String(date.getMonth() + 1).padStart(2, '0');
+            const d = String(date.getDate()).padStart(2, '0');
+            const dateStr = y + '-' + m + '-' + d;
+
+            // Sabtu & Minggu = weekend (emas)
             if (day === 6 || day === 0) {
                 dayElem.classList.add('weekend-day');
+                dayElem.title = 'Weekend - Harga High Season';
+            }
+
+            // Hari libur nasional (merah)
+            if (hariLiburIndonesia.includes(dateStr)) {
+                dayElem.classList.add('holiday-day');
+                dayElem.title = 'Libur Nasional - Harga High Season';
             }
         }
     });

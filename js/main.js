@@ -38,47 +38,56 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ===== PARALLAX SCROLL (Apple-style) =====
-// Background moves slower than content — speed ratio 0.4 (bg) vs 1.0 (text)
-function initParallax() {
-    const parallaxElements = document.querySelectorAll('.parallax-bg');
-    
+// ===== APPLE-STYLE PARALLAX =====
+// Text scrolls at normal speed (1x)
+// Background image scrolls slower (0.4x) — creates depth effect
+(function() {
+    const parallaxBgs = document.querySelectorAll('.parallax-bg');
+    let ticking = false;
+
     function updateParallax() {
         const scrollY = window.pageYOffset;
 
-        parallaxElements.forEach(el => {
-            const section = el.parentElement;
+        parallaxBgs.forEach(bg => {
+            const section = bg.parentElement;
+            const rect = section.getBoundingClientRect();
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
-            
-            // Only animate when section is in viewport
-            const start = sectionTop - window.innerHeight;
-            const end = sectionTop + sectionHeight;
-            
-            if (scrollY >= start && scrollY <= end) {
-                // Calculate how far we've scrolled relative to this section
-                const distance = scrollY - sectionTop;
-                // Background moves at 0.4x speed of scroll (slower = parallax feel)
-                const translateY = distance * 0.4;
-                el.style.transform = `translate3d(0, ${translateY}px, 0)`;
+            const windowHeight = window.innerHeight;
+
+            // Check if section is visible in viewport
+            if (rect.bottom > 0 && rect.top < windowHeight) {
+                // How far the section top has passed the viewport top
+                // For hero (top=0): scrollY directly
+                // For other sections: relative scroll position
+                const scrolled = scrollY - sectionTop;
+                
+                // Move background at 0.4x speed of scroll
+                // Negative because when you scroll down, bg should move up but slower
+                const speed = 0.4;
+                const yPos = scrolled * speed;
+                
+                bg.style.transform = `translate3d(0, ${yPos}px, 0)`;
             }
         });
 
-        requestAnimationFrame(updateParallax);
+        ticking = false;
     }
 
-    // Only enable on desktop (parallax can be janky on mobile)
+    function onScroll() {
+        if (!ticking) {
+            requestAnimationFrame(updateParallax);
+            ticking = true;
+        }
+    }
+
+    // Only enable parallax on desktop
     if (window.innerWidth > 768) {
-        requestAnimationFrame(updateParallax);
+        window.addEventListener('scroll', onScroll, { passive: true });
+        // Initial call
+        updateParallax();
     }
-}
-
-initParallax();
-
-// Re-init on resize
-window.addEventListener('resize', () => {
-    initParallax();
-});
+})();
 
 // ===== CONTACT FORM - WHATSAPP REDIRECT =====
 const contactForm = document.getElementById('contactForm');

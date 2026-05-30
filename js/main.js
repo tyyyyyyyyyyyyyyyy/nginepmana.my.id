@@ -109,6 +109,30 @@ if (checkinDate && typeof flatpickr !== 'undefined') {
         altFormat: 'd F Y',
         minDate: 'today',
         disableMobile: true,
+        onReady: function(selectedDates, dateStr, instance) {
+            // Swipe gesture support for mobile
+            const calendar = instance.calendarContainer;
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            calendar.addEventListener('touchstart', function(e) {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            calendar.addEventListener('touchend', function(e) {
+                touchEndX = e.changedTouches[0].screenX;
+                const diff = touchStartX - touchEndX;
+
+                // Swipe kiri (>50px) = bulan berikutnya
+                if (diff > 50) {
+                    instance.changeMonth(1);
+                }
+                // Swipe kanan (>50px) = bulan sebelumnya
+                if (diff < -50) {
+                    instance.changeMonth(-1);
+                }
+            }, { passive: true });
+        },
         onDayCreate: function(dObj, dStr, fp, dayElem) {
             const date = dayElem.dateObj;
             const day = date.getDay();

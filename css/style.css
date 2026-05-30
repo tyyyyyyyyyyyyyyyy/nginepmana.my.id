@@ -6,11 +6,11 @@
 }
 
 :root {
-    --primary: #2d6a4f;
-    --primary-dark: #1b4332;
-    --primary-light: #52b788;
-    --secondary: #d4a373;
-    --accent: #e9c46a;
+    --primary: #1e3a5f;
+    --primary-dark: #0f2440;
+    --primary-light: #4a90d9;
+    --secondary: #c9a84c;
+    --accent: #d4af37;
     --dark: #1a1a2e;
     --gray: #6b7280;
     --gray-light: #f3f4f6;
@@ -161,19 +161,8 @@ img {
     justify-content: center;
     text-align: center;
     position: relative;
-    background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 50%, #40916c 100%);
+    background: url('../img/hero-bg.jpg') center/cover no-repeat fixed;
     overflow: hidden;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('../img/hero-bg.jpg') center/cover no-repeat;
-    opacity: 0.3;
 }
 
 .hero-overlay {
@@ -182,7 +171,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(27,67,50,0.6) 0%, rgba(45,106,79,0.8) 100%);
+    background: linear-gradient(180deg, rgba(15,36,64,0.7) 0%, rgba(30,58,95,0.85) 100%);
 }
 
 .hero-content {
@@ -263,7 +252,7 @@ img {
 .btn-primary:hover {
     background: var(--primary);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(45,106,79,0.4);
+    box-shadow: 0 5px 15px rgba(30,58,95,0.4);
 }
 
 .btn-secondary {
@@ -379,7 +368,7 @@ img {
     position: relative;
     height: 220px;
     overflow: hidden;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1e3a5f 0%, #4a90d9 100%);
 }
 
 .villa-image img {
@@ -518,7 +507,7 @@ img {
     overflow: hidden;
     box-shadow: var(--shadow-hover);
     height: 400px;
-    background: linear-gradient(135deg, #52b788, #2d6a4f);
+    background: linear-gradient(135deg, #4a90d9, #1e3a5f);
 }
 
 .about-image img {
@@ -669,7 +658,7 @@ img {
 .form-group select:focus,
 .form-group textarea:focus {
     border-color: var(--primary-light);
-    box-shadow: 0 0 0 3px rgba(82,183,136,0.1);
+    box-shadow: 0 0 0 3px rgba(74,144,217,0.1);
 }
 
 .form-group textarea {
@@ -859,7 +848,7 @@ img {
     position: relative;
     display: flex;
     align-items: flex-end;
-    background: linear-gradient(135deg, #1b4332, #2d6a4f);
+    background: linear-gradient(135deg, #0f2440, #1e3a5f);
 }
 
 .villa-detail-hero img {

@@ -1273,10 +1273,6 @@ img {
 
 /* ===== FLATPICKR CUSTOM (Weekend & Holiday Highlight) ===== */
 .flatpickr-calendar .flatpickr-day.weekend-day {
-    background: rgba(212, 175, 55, 0.2) !important;
-    border-color: rgba(212, 175, 55, 0.4) !important;
-    color: #b8860b !important;
-    font-weight: 600;
     position: relative;
 }
 
@@ -1292,12 +1288,6 @@ img {
     border-radius: 50%;
 }
 
-.flatpickr-calendar .flatpickr-day.weekend-day:hover {
-    background: rgba(212, 175, 55, 0.4) !important;
-    border-color: #d4af37 !important;
-    color: #8b6914 !important;
-}
-
 .flatpickr-calendar .flatpickr-day.weekend-day.selected,
 .flatpickr-calendar .flatpickr-day.weekend-day.selected:hover {
     background: #d4af37 !important;
@@ -1311,10 +1301,6 @@ img {
 
 /* Hari Libur Nasional */
 .flatpickr-calendar .flatpickr-day.holiday-day {
-    background: rgba(220, 53, 69, 0.15) !important;
-    border-color: rgba(220, 53, 69, 0.4) !important;
-    color: #dc3545 !important;
-    font-weight: 700;
     position: relative;
 }
 
@@ -1328,11 +1314,6 @@ img {
     height: 5px;
     background: #dc3545;
     border-radius: 50%;
-}
-
-.flatpickr-calendar .flatpickr-day.holiday-day:hover {
-    background: rgba(220, 53, 69, 0.3) !important;
-    border-color: #dc3545 !important;
 }
 
 .flatpickr-calendar .flatpickr-day.holiday-day.selected,

@@ -1147,3 +1147,122 @@ img {
 .feature-item:nth-child(4) { transition-delay: 0.3s; }
 .testimonial-card:nth-child(2) { transition-delay: 0.1s; }
 .testimonial-card:nth-child(3) { transition-delay: 0.2s; }
+
+
+/* ===== TRUST / REKENING SECTION ===== */
+.trust-section {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.trust-alert {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    border-left: 5px solid #ffc107;
+    padding: 20px 25px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.trust-alert i {
+    font-size: 1.5rem;
+    color: #d4af37;
+    flex-shrink: 0;
+}
+
+.trust-alert p {
+    font-size: 0.95rem;
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+.trust-alert .highlight-name {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.rekening-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.rekening-card {
+    background: var(--gray-light);
+    border: 2px solid #e5e7eb;
+    border-radius: var(--radius);
+    padding: 30px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.rekening-card:hover {
+    border-color: var(--primary-light);
+    box-shadow: var(--shadow);
+    transform: translateY(-3px);
+}
+
+.bank-logo {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 10px 25px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.rekening-info h4 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: var(--dark);
+}
+
+.rekening-number {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    font-family: 'Courier New', monospace;
+}
+
+.rekening-name {
+    font-size: 0.9rem;
+    color: var(--gray);
+    font-style: italic;
+}
+
+.trust-note {
+    text-align: center;
+    padding: 15px;
+    background: var(--gray-light);
+    border-radius: 8px;
+}
+
+.trust-note p {
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.trust-note i {
+    color: var(--primary-light);
+    margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+    .rekening-grid {
+        grid-template-columns: 1fr;
+    }
+    .trust-alert {
+        flex-direction: column;
+        text-align: center;
+    }
+}

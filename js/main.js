@@ -89,6 +89,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
 })();
 
+// ===== FLATPICKR DATE PICKER (Bahasa Indonesia) =====
+const checkinDate = document.getElementById('checkinDate');
+if (checkinDate && typeof flatpickr !== 'undefined') {
+    flatpickr(checkinDate, {
+        locale: 'id',
+        dateFormat: 'd F Y',
+        minDate: 'today',
+        disableMobile: true,
+        monthSelectorType: 'static',
+        altInput: true,
+        altFormat: 'd F Y',
+        placeholder: 'Pilih Tanggal Check-in'
+    });
+}
+
 // ===== CONTACT FORM - WHATSAPP REDIRECT =====
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
@@ -98,7 +113,7 @@ if (contactForm) {
         const name = this.querySelector('input[type="text"]').value;
         const phone = this.querySelector('input[type="tel"]').value;
         const villa = this.querySelector('select').value;
-        const date = this.querySelector('input[type="date"]').value;
+        const date = document.getElementById('checkinDate').value;
         const message = this.querySelector('textarea').value;
 
         const villaNames = {

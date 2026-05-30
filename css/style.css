@@ -271,10 +271,49 @@ img {
     width: 100%;
 }
 
+/* ===== PARALLAX SECTIONS ===== */
+.parallax-section {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.parallax-section .parallax-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.parallax-section > .container {
+    position: relative;
+    z-index: 2;
+}
+
 /* ===== FEATURES ===== */
 .features {
     padding: 80px 0;
-    background: var(--gray-light);
+    background: url('../img/parallax-features.jpg') center/cover no-repeat fixed;
+    position: relative;
+}
+
+.features .parallax-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(243, 244, 246, 0.92);
+    z-index: 1;
+}
+
+.features > .container {
+    position: relative;
+    z-index: 2;
 }
 
 .features-grid {
@@ -343,6 +382,23 @@ img {
 /* ===== VILLA LISTINGS ===== */
 .villas {
     padding: 100px 0;
+    background: url('../img/parallax-villas.jpg') center/cover no-repeat fixed;
+    position: relative;
+}
+
+.villas .parallax-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.93);
+    z-index: 1;
+}
+
+.villas > .container {
+    position: relative;
+    z-index: 2;
 }
 
 .villa-grid {
@@ -457,7 +513,23 @@ img {
 /* ===== ABOUT ===== */
 .about {
     padding: 100px 0;
-    background: var(--gray-light);
+    background: url('../img/hero-bg.jpg') center/cover no-repeat fixed;
+    position: relative;
+}
+
+.about .parallax-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(243, 244, 246, 0.93);
+    z-index: 1;
+}
+
+.about > .container {
+    position: relative;
+    z-index: 2;
 }
 
 .about-grid {
@@ -519,6 +591,23 @@ img {
 /* ===== TESTIMONIALS ===== */
 .testimonials {
     padding: 100px 0;
+    background: url('../img/parallax-testimonials.jpg') center/cover no-repeat fixed;
+    position: relative;
+}
+
+.testimonials .parallax-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.90);
+    z-index: 1;
+}
+
+.testimonials > .container {
+    position: relative;
+    z-index: 2;
 }
 
 .testimonial-grid {
@@ -567,7 +656,23 @@ img {
 /* ===== CONTACT ===== */
 .contact {
     padding: 100px 0;
-    background: var(--gray-light);
+    background: url('../img/parallax-contact.jpg') center/cover no-repeat fixed;
+    position: relative;
+}
+
+.contact .parallax-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(243, 244, 246, 0.92);
+    z-index: 1;
+}
+
+.contact > .container {
+    position: relative;
+    z-index: 2;
 }
 
 .contact-grid {
@@ -768,6 +873,16 @@ img {
 }
 
 @media (max-width: 768px) {
+    /* Disable parallax on mobile (not supported well) */
+    .hero,
+    .features,
+    .villas,
+    .about,
+    .testimonials,
+    .contact {
+        background-attachment: scroll !important;
+    }
+
     .nav-links {
         display: none;
         position: absolute;

@@ -1417,3 +1417,9 @@ img {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
+
+
+/* ===== SCROLL OFFSET FOR FIXED NAVBAR ===== */
+#contactFormSection {
+    scroll-margin-top: 100px;
+}

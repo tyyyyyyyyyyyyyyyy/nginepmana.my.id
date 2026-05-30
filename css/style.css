@@ -852,7 +852,7 @@ img {
 /* ===== WHATSAPP FLOAT ===== */
 .wa-float {
     position: fixed;
-    bottom: 25px;
+    bottom: 35px;
     right: 25px;
     width: 60px;
     height: 60px;
@@ -1378,23 +1378,28 @@ img {
 }
 
 
-/* ===== RUNNING TEXT TICKER ===== */
-.ticker-bar {
+/* ===== FIXED RUNNING TEXT (Bottom of screen) ===== */
+.ticker-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background: var(--primary-dark);
     overflow: hidden;
     white-space: nowrap;
-    padding: 8px 0;
+    padding: 6px 0;
+    z-index: 998;
 }
 
 .ticker-content {
     display: inline-block;
-    animation: ticker 30s linear infinite;
+    animation: ticker 25s linear infinite;
 }
 
 .ticker-item {
     display: inline-block;
     padding: 0 40px;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: rgba(255, 255, 255, 0.9);
     letter-spacing: 0.3px;
 }

@@ -38,35 +38,29 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ===== APPLE-STYLE PARALLAX =====
-// Text scrolls at normal speed (1x)
-// Background image scrolls slower (0.4x) — creates depth effect
+// ===== APPLE-STYLE PARALLAX (works on mobile + desktop) =====
+// Uses background-position-y shift instead of transform
+// This approach works reliably on Chrome Android
 (function() {
     const parallaxBgs = document.querySelectorAll('.parallax-bg');
     let ticking = false;
 
     function updateParallax() {
         const scrollY = window.pageYOffset;
+        const windowHeight = window.innerHeight;
 
         parallaxBgs.forEach(bg => {
             const section = bg.parentElement;
             const rect = section.getBoundingClientRect();
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            const windowHeight = window.innerHeight;
 
-            // Check if section is visible in viewport
-            if (rect.bottom > 0 && rect.top < windowHeight) {
-                // How far the section top has passed the viewport top
-                // For hero (top=0): scrollY directly
-                // For other sections: relative scroll position
-                const scrolled = scrollY - sectionTop;
-                
-                // Move background at different speed based on device
-                const speed = window.innerWidth <= 768 ? 0.25 : 0.4;
-                const yPos = scrolled * speed;
-                
-                bg.style.transform = `translate3d(0, ${yPos}px, 0)`;
+            // Only process if section is in or near viewport
+            if (rect.bottom > -200 && rect.top < windowHeight + 200) {
+                // Calculate offset: how far from center of viewport
+                const sectionCenter = rect.top + rect.height / 2;
+                const viewCenter = windowHeight / 2;
+                const offset = (sectionCenter - viewCenter) * 0.3;
+
+                bg.style.transform = 'translate3d(0,' + offset + 'px, 0)';
             }
         });
 
@@ -80,9 +74,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     }
 
-    // Enable parallax on all devices including mobile
     window.addEventListener('scroll', onScroll, { passive: true });
-    // Initial call
+    window.addEventListener('resize', updateParallax, { passive: true });
     updateParallax();
 })();
 

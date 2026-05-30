@@ -161,12 +161,12 @@ img {
     justify-content: center;
     text-align: center;
     position: relative;
-    overflow: hidden;
+    overflow: clip;
 }
 
 .hero .parallax-bg {
     position: absolute;
-    top: 0;
+    top: -15%;
     left: 0;
     width: 100%;
     height: 130%;
@@ -285,7 +285,7 @@ img {
 /* ===== PARALLAX SYSTEM ===== */
 .parallax-bg {
     position: absolute;
-    top: 0;
+    top: -15%;
     left: 0;
     width: 100%;
     height: 130%;
@@ -300,7 +300,7 @@ img {
 .features {
     padding: 80px 0;
     position: relative;
-    overflow: hidden;
+    overflow: clip;
 }
 
 .features .parallax-bg {
@@ -389,7 +389,7 @@ img {
 .villas {
     padding: 100px 0;
     position: relative;
-    overflow: hidden;
+    overflow: clip;
 }
 
 .villas .parallax-bg {
@@ -524,7 +524,7 @@ img {
 .about {
     padding: 100px 0;
     position: relative;
-    overflow: hidden;
+    overflow: clip;
 }
 
 .about .parallax-bg {
@@ -606,7 +606,7 @@ img {
 .testimonials {
     padding: 100px 0;
     position: relative;
-    overflow: hidden;
+    overflow: clip;
 }
 
 .testimonials .parallax-bg {
@@ -675,7 +675,7 @@ img {
 .contact {
     padding: 100px 0;
     position: relative;
-    overflow: hidden;
+    overflow: clip;
 }
 
 .contact .parallax-bg {

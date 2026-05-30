@@ -62,9 +62,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 // For other sections: relative scroll position
                 const scrolled = scrollY - sectionTop;
                 
-                // Move background at 0.4x speed of scroll
-                // Negative because when you scroll down, bg should move up but slower
-                const speed = 0.4;
+                // Move background at different speed based on device
+                const speed = window.innerWidth <= 768 ? 0.25 : 0.4;
                 const yPos = scrolled * speed;
                 
                 bg.style.transform = `translate3d(0, ${yPos}px, 0)`;
@@ -81,12 +80,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     }
 
-    // Only enable parallax on desktop
-    if (window.innerWidth > 768) {
-        window.addEventListener('scroll', onScroll, { passive: true });
-        // Initial call
-        updateParallax();
-    }
+    // Enable parallax on all devices including mobile
+    window.addEventListener('scroll', onScroll, { passive: true });
+    // Initial call
+    updateParallax();
 })();
 
 // ===== HARI LIBUR NASIONAL INDONESIA 2026 =====

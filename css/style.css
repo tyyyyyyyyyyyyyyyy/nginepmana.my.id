@@ -1269,3 +1269,69 @@ img {
         text-align: center;
     }
 }
+
+
+/* ===== FLATPICKR CUSTOM (Weekend Highlight) ===== */
+.flatpickr-day.weekend-day {
+    background: rgba(212, 175, 55, 0.15) !important;
+    border-color: rgba(212, 175, 55, 0.3) !important;
+    position: relative;
+}
+
+.flatpickr-day.weekend-day::after {
+    content: '';
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 5px;
+    background: #d4af37;
+    border-radius: 50%;
+}
+
+.flatpickr-day.weekend-day:hover {
+    background: rgba(212, 175, 55, 0.35) !important;
+    border-color: #d4af37 !important;
+}
+
+.flatpickr-day.weekend-day.selected {
+    background: #d4af37 !important;
+    border-color: #d4af37 !important;
+    color: #fff !important;
+}
+
+.flatpickr-day.weekend-day.selected::after {
+    background: #fff;
+}
+
+/* Calendar Legend */
+.calendar-legend {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: var(--gray);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.legend-dot.weekday {
+    background: #e5e7eb;
+    border: 1px solid #d1d5db;
+}
+
+.legend-dot.weekend {
+    background: #d4af37;
+}

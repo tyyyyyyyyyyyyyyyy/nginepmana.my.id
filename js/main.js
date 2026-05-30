@@ -100,7 +100,17 @@ if (checkinDate && typeof flatpickr !== 'undefined') {
         monthSelectorType: 'static',
         altInput: true,
         altFormat: 'd F Y',
-        placeholder: 'Pilih Tanggal Check-in'
+        placeholder: 'Pilih Tanggal Check-in',
+        onDayCreate: function(dObj, dStr, fp, dayElem) {
+            // Get the day of week (0=Sunday, 6=Saturday)
+            const date = dayElem.dateObj;
+            const day = date.getDay();
+            
+            // Highlight Saturday (6) and Sunday (0) as weekend/high season
+            if (day === 6 || day === 0) {
+                dayElem.classList.add('weekend-day');
+            }
+        }
     });
 }
 

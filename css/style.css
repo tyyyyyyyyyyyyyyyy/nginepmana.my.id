@@ -1423,3 +1423,10 @@ img {
 #contactFormSection {
     scroll-margin-top: 50px;
 }
+
+
+/* ===== TICKER PAUSE ON HOLD/TOUCH ===== */
+.ticker-fixed:hover .ticker-content,
+.ticker-fixed.paused .ticker-content {
+    animation-play-state: paused;
+}

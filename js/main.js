@@ -204,3 +204,31 @@ document.querySelectorAll('.villa-card, .feature-item, .testimonial-card, .about
     el.classList.add('animate-target');
     observer.observe(el);
 });
+
+
+
+// ===== TICKER PAUSE ON TOUCH/HOLD =====
+const ticker = document.querySelector('.ticker-fixed');
+if (ticker) {
+    // Touch hold = pause
+    ticker.addEventListener('touchstart', () => {
+        ticker.classList.add('paused');
+    }, { passive: true });
+
+    ticker.addEventListener('touchend', () => {
+        ticker.classList.remove('paused');
+    }, { passive: true });
+
+    // Mouse hold = pause (already handled by CSS :hover, but also for click-hold)
+    ticker.addEventListener('mousedown', () => {
+        ticker.classList.add('paused');
+    });
+
+    ticker.addEventListener('mouseup', () => {
+        ticker.classList.remove('paused');
+    });
+
+    ticker.addEventListener('mouseleave', () => {
+        ticker.classList.remove('paused');
+    });
+}

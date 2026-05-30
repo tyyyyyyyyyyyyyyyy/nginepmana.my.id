@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nginep Mana - Sewa Villa di Kota Batu, Malang. Temukan villa impian Anda untuk liburan keluarga yang nyaman dan berkesan.">
+    <title>Nginep Mana? | Sewa Villa di Kota Batu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fas fa-home"></i></span>
+                <span class="logo-text">Nginep<span class="highlight">Mana</span></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#villa">Villa Kami</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="beranda">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Nginep Mana?</h1>
+            <p class="hero-subtitle">Temukan Villa Impian Anda di Kota Batu</p>
+            <p class="hero-desc">Nikmati liburan keluarga yang nyaman dan berkesan dengan pemandangan alam pegunungan yang memukau</p>
+            <a href="#villa" class="btn btn-primary">Lihat Villa</a>
+        </div>
+        <div class="hero-scroll">
+            <a href="#villa"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-mountain"></i></div>
+                    <h3>Pemandangan Indah</h3>
+                    <p>Nikmati udara sejuk pegunungan dan panorama alam Kota Batu yang memukau</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Aman & Nyaman</h3>
+                    <p>Fasilitas lengkap dengan keamanan 24 jam untuk kenyamanan Anda dan keluarga</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h3>Harga Terjangkau</h3>
+                    <p>Dapatkan pengalaman menginap terbaik dengan harga yang ramah di kantong</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-map-marked-alt"></i></div>
+                    <h3>Lokasi Strategis</h3>
+                    <p>Dekat dengan berbagai destinasi wisata populer di Kota Batu</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Villa Listings -->
+    <section class="villas" id="villa">
+        <div class="container">
+            <div class="section-header">
+                <h2>Villa Kami</h2>
+                <p>Pilih villa yang sesuai dengan kebutuhan liburan Anda</p>
+            </div>
+            <div class="villa-grid">
+                <!-- Villa 1 -->
+                <div class="villa-card">
+                    <div class="villa-image">
+                        <img src="img/villa1.jpg" alt="Villa Pinus Batu">
+                        <div class="villa-badge">Populer</div>
+                    </div>
+                    <div class="villa-info">
+                        <h3>Villa Pinus Batu</h3>
+                        <p class="villa-location"><i class="fas fa-map-marker-alt"></i> Jl. Raya Selecta, Kota Batu</p>
+                        <div class="villa-features">
+                            <span><i class="fas fa-bed"></i> 3 Kamar</span>
+                            <span><i class="fas fa-bath"></i> 2 Kamar Mandi</span>
+                            <span><i class="fas fa-users"></i> 10 Orang</span>
+                        </div>
+                        <div class="villa-price">
+                            <span class="price">Rp 1.500.000</span>
+                            <span class="per-night">/ malam</span>
+                        </div>
+                        <a href="villa-pinus.html" class="btn btn-secondary">Lihat Detail</a>
+                    </div>
+                </div>
+
+                <!-- Villa 2 -->
+                <div class="villa-card">
+                    <div class="villa-image">
+                        <img src="img/villa2.jpg" alt="Villa Apel Malang">
+                        <div class="villa-badge new">Baru</div>
+                    </div>
+                    <div class="villa-info">
+                        <h3>Villa Apel Malang</h3>
+                        <p class="villa-location"><i class="fas fa-map-marker-alt"></i> Jl. Bukit Berbunga, Kota Batu</p>
+                        <div class="villa-features">
+                            <span><i class="fas fa-bed"></i> 4 Kamar</span>
+                            <span><i class="fas fa-bath"></i> 3 Kamar Mandi</span>
+                            <span><i class="fas fa-users"></i> 15 Orang</span>
+                        </div>
+                        <div class="villa-price">
+                            <span class="price">Rp 2.200.000</span>
+                            <span class="per-night">/ malam</span>
+                        </div>
+                        <a href="villa-apel.html" class="btn btn-secondary">Lihat Detail</a>
+                    </div>
+                </div>
+
+                <!-- Villa 3 -->
+                <div class="villa-card">
+                    <div class="villa-image">
+                        <img src="img/villa3.jpg" alt="Villa Sakura Hills">
+                    </div>
+                    <div class="villa-info">
+                        <h3>Villa Sakura Hills</h3>
+                        <p class="villa-location"><i class="fas fa-map-marker-alt"></i> Jl. Oro-oro Ombo, Kota Batu</p>
+                        <div class="villa-features">
+                            <span><i class="fas fa-bed"></i> 2 Kamar</span>
+                            <span><i class="fas fa-bath"></i> 1 Kamar Mandi</span>
+                            <span><i class="fas fa-users"></i> 6 Orang</span>
+                        </div>
+                        <div class="villa-price">
+                            <span class="price">Rp 900.000</span>
+                            <span class="per-night">/ malam</span>
+                        </div>
+                        <a href="villa-sakura.html" class="btn btn-secondary">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="tentang">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>Tentang Nginep Mana</h2>
+                    <p>Kami adalah penyedia jasa sewa villa terpercaya di Kota Batu, Malang. Dengan pengalaman bertahun-tahun, kami berkomitmen memberikan pengalaman menginap terbaik untuk Anda dan keluarga.</p>
+                    <p>Setiap villa kami dilengkapi dengan fasilitas lengkap, mulai dari dapur, ruang keluarga, area BBQ, hingga kolam renang pribadi. Semua dirancang untuk membuat liburan Anda semakin berkesan.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Villa Tersedia</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Tamu Puas</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">4.8</span>
+                            <span class="stat-label">Rating</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="img/about.jpg" alt="Tentang Nginep Mana">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Apa Kata Mereka?</h2>
+                <p>Pengalaman tamu-tamu kami yang telah menginap</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"Villa-nya sangat bersih dan nyaman. Pemandangannya luar biasa! Anak-anak sangat senang. Pasti akan kembali lagi."</p>
+                    <div class="testimonial-author">
+                        <strong>Budi Santoso</strong>
+                        <span>Jakarta</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"Pelayanan ramah, lokasi strategis dekat tempat wisata. Harga sangat worth it untuk fasilitas yang didapat."</p>
+                    <div class="testimonial-author">
+                        <strong>Sari Dewi</strong>
+                        <span>Surabaya</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>"Tempatnya cocok untuk gathering keluarga besar. Dapur lengkap, area BBQ luas. Recommended banget!"</p>
+                    <div class="testimonial-author">
+                        <strong>Andi Wijaya</strong>
+                        <span>Bandung</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="kontak">
+        <div class="container">
+            <div class="section-header">
+                <h2>Hubungi Kami</h2>
+                <p>Siap membantu Anda menemukan villa yang sempurna</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Alamat</h4>
+                            <p>Kota Batu, Malang, Jawa Timur</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>+62 812-3456-7890</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@nginepmana.my.id</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Jam Operasional</h4>
+                            <p>Setiap Hari, 08:00 - 21:00 WIB</p>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Nama Lengkap" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Nomor WhatsApp" required>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="" disabled selected>Pilih Villa</option>
+                                <option value="pinus">Villa Pinus Batu</option>
+                                <option value="apel">Villa Apel Malang</option>
+                                <option value="sakura">Villa Sakura Hills</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" placeholder="Tanggal Check-in" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Pesan tambahan..." rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fab fa-whatsapp"></i> Kirim via WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon"><i class="fas fa-home"></i></span>
+                        <span class="logo-text">Nginep<span class="highlight">Mana</span></span>
+                    </a>
+                    <p>Penyedia jasa sewa villa terpercaya di Kota Batu, Malang. Wujudkan liburan impian Anda bersama kami.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="#beranda">Beranda</a></li>
+                        <li><a href="#villa">Villa Kami</a></li>
+                        <li><a href="#tentang">Tentang</a></li>
+                        <li><a href="#kontak">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Villa</h4>
+                    <ul>
+                        <li><a href="villa-pinus.html">Villa Pinus Batu</a></li>
+                        <li><a href="villa-apel.html">Villa Apel Malang</a></li>
+                        <li><a href="villa-sakura.html">Villa Sakura Hills</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li><i class="fab fa-whatsapp"></i> +62 812-3456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@nginepmana.my.id</li>
+                        <li><i class="fas fa-globe"></i> nginepmana.my.id</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 NginepmMana.my.id - All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/6281234567890" class="wa-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+IMAGE PLACEHOLDERS
+==================
+
+Silakan ganti file-file gambar berikut dengan foto asli villa Anda:
+
+1. hero-bg.jpg   - Foto latar belakang hero (landscape, min 1920x1080px)
+2. villa1.jpg    - Foto utama Villa Pinus Batu (min 800x600px)
+3. villa2.jpg    - Foto utama Villa Apel Malang (min 800x600px)
+4. villa3.jpg    - Foto utama Villa Sakura Hills (min 800x600px)
+5. about.jpg     - Foto untuk bagian "Tentang Kami" (min 800x600px)
+
+Tips:
+- Gunakan foto dengan kualitas tinggi
+- Pastikan ukuran file tidak terlalu besar (max 500KB per foto)
+- Format yang disarankan: JPG atau WebP
+- Aspect ratio landscape lebih disarankan untuk villa

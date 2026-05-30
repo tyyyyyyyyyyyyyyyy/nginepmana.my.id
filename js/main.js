@@ -17,7 +17,6 @@ if (navToggle) {
         navLinks.classList.toggle('active');
     });
 
-    // Close nav when clicking a link
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
@@ -37,6 +36,48 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
     });
+});
+
+// ===== PARALLAX SCROLL (Apple-style) =====
+// Background moves slower than content — speed ratio 0.4 (bg) vs 1.0 (text)
+function initParallax() {
+    const parallaxElements = document.querySelectorAll('.parallax-bg');
+    
+    function updateParallax() {
+        const scrollY = window.pageYOffset;
+
+        parallaxElements.forEach(el => {
+            const section = el.parentElement;
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            
+            // Only animate when section is in viewport
+            const start = sectionTop - window.innerHeight;
+            const end = sectionTop + sectionHeight;
+            
+            if (scrollY >= start && scrollY <= end) {
+                // Calculate how far we've scrolled relative to this section
+                const distance = scrollY - sectionTop;
+                // Background moves at 0.4x speed of scroll (slower = parallax feel)
+                const translateY = distance * 0.4;
+                el.style.transform = `translate3d(0, ${translateY}px, 0)`;
+            }
+        });
+
+        requestAnimationFrame(updateParallax);
+    }
+
+    // Only enable on desktop (parallax can be janky on mobile)
+    if (window.innerWidth > 768) {
+        requestAnimationFrame(updateParallax);
+    }
+}
+
+initParallax();
+
+// Re-init on resize
+window.addEventListener('resize', () => {
+    initParallax();
 });
 
 // ===== CONTACT FORM - WHATSAPP REDIRECT =====

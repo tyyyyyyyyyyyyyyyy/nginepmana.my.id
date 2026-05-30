@@ -1376,3 +1376,39 @@ img {
 .flatpickr-calendar .flatpickr-current-month input.cur-year {
     font-size: 0.9rem;
 }
+
+
+/* ===== RUNNING TEXT TICKER ===== */
+.ticker-bar {
+    background: var(--primary-dark);
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 8px 0;
+}
+
+.ticker-content {
+    display: inline-block;
+    animation: ticker 30s linear infinite;
+}
+
+.ticker-item {
+    display: inline-block;
+    padding: 0 40px;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 0.3px;
+}
+
+.ticker-item i {
+    margin-right: 5px;
+    color: var(--accent);
+}
+
+.ticker-item strong {
+    color: var(--accent);
+}
+
+@keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}

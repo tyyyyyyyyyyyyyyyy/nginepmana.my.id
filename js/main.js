@@ -114,7 +114,7 @@ if (contactForm) {
         waMessage += `Tanggal Check-in: ${date}\n`;
         if (message) waMessage += `Pesan: ${message}\n`;
 
-        const waURL = `https://wa.me/6281234567890?text=${encodeURIComponent(waMessage)}`;
+        const waURL = `https://wa.me/628997923594?text=${encodeURIComponent(waMessage)}`;
         window.open(waURL, '_blank');
     });
 }
